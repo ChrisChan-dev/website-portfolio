@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chrischan's Desktop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+
+  <button class="profile-btn" aria-label="Profile">
+    <img id="profileImg" src="Designer (2).png" alt="Profile Picture" />
+  </button>
+
+  <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </button>
+
+  <div class="floating-nav">
+    <button class="nav-btn active" onclick="showSection('profile', event)">Profile</button>
+    <button class="nav-btn" onclick="showSection('about', event)">About</button>
+    <button class="nav-btn" onclick="showSection('contents', event)">Contents</button>
+    <button class="nav-btn" onclick="showSection('links', event)">Links</button>
+    <button class="nav-btn" onclick="showSection('email', event)">Email Me</button>
+  </div>
+
+  <div class="container" id="mainContainer">
+
+    <div id="profile" class="section profile-section active">
+      <div class="header-profile">
+        <div class="profile-picture">
+          <img src="pft.png" alt="Profile photo" />
+        </div>
+
+        <div class="profile-bio">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="section about-section">
+      <h2>📘 About</h2>
+      <p>I specialize in front-end development using HTML, CSS, and JavaScript. I enjoy learning new frameworks and enhancing user experience.</p>
+    </div>
+
+    <div id="contents" class="section contents-section">
+      <h2>🧩 Contents</h2>
+      <p>Here are some of my recent works and projects. Below is some filler text to simulate a longer section:</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate viverra lacus, sed congue ipsum accumsan quis.</p>
+    </div>
+
+    <div id="links" class="section links-section">
+      <h2>🔗 Links</h2>
+      <p>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Twitter</a>
+      </p>
+    </div>
+
+    <div id="email" class="section email-section">
+      <h2>📧 Email Me</h2>
+      <p>Reach me at <a href="mailto:chandev@yahoo.com">chandev@yahoo.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 John Christian Lolos</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
