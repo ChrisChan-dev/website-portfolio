@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chrischan's Desktop</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chrischan's Desktop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark">
 
-    <!-- Profile Button Top Left -->
-    <button class="profile-btn" onclick="changeProfile()" aria-label="Change Profile">
-        <img id="profileImg" src="profile1.jpg" alt="Profile Picture" />
-    </button>
+  <button class="profile-btn" aria-label="Profile">
+    <img id="profileImg" src="Designer (2).png" alt="Profile Picture" />
+  </button>
 
-    <!-- Theme Toggle Button Top Right -->
-    <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span class="icon sun">☀️</span>
-        <span class="icon moon">🌙</span>
-    </button>
+  <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </button>
 
-    <!-- Nav Buttons Floating Outside Container -->
-    <div class="floating-nav">
-        <button class="nav-btn active" onclick="showSection('profile', event)">Profile</button>
-        <button class="nav-btn" onclick="showSection('about', event)">About</button>
-        <button class="nav-btn" onclick="showSection('contents', event)">Contents</button>
-        <button class="nav-btn" onclick="showSection('links', event)">Links</button>
-        <button class="nav-btn" onclick="showSection('email', event)">Email Me</button>
+  <div class="floating-nav">
+    <button class="nav-btn active" onclick="showSection('profile', event)">Profile</button>
+    <button class="nav-btn" onclick="showSection('about', event)">About</button>
+    <button class="nav-btn" onclick="showSection('contents', event)">Contents</button>
+    <button class="nav-btn" onclick="showSection('links', event)">Links</button>
+    <button class="nav-btn" onclick="showSection('email', event)">Email Me</button>
+  </div>
+
+  <div class="container" id="mainContainer">
+
+    <div id="profile" class="section profile-section active">
+      <div class="header-profile">
+        <div class="profile-picture">
+          <img src="pft.png" alt="Profile photo" />
+        </div>
+
+        <div class="profile-bio">
+
+        </div>
+      </div>
     </div>
 
-    <div class="container" id="mainContainer">
-        <h1>My Portfolio</h1>
-
-        <section id="profile" class="section active">
-            <h2>👤 Profile Bio</h2>
-            <p>Hello! I'm <strong>Your Name</strong>, a passionate web developer who loves creating clean, responsive websites.</p>
-        </section>
-
-        <section id="about" class="section">
-            <h2>📘 About</h2>
-            <p>I specialize in front-end development using HTML, CSS, and JavaScript. I enjoy learning new frameworks and enhancing user experience.</p>
-        </section>
-
-        <section id="contents" class="section">
-            <h2>🧩 Contents</h2>
-            <p>Here are some of my recent works and projects. Below is some filler text to simulate a longer section:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate viverra lacus, sed congue ipsum accumsan quis. Nulla facilisi. Duis euismod at lacus ac aliquam. Integer sodales dapibus dolor, et fermentum nunc blandit vel. Morbi malesuada ligula ac lacus ullamcorper, sit amet finibus odio malesuada. Suspendisse non nibh ac neque facilisis porta. Sed sit amet mauris in odio congue rhoncus ut sit amet est.</p>
-            <p>Curabitur interdum nisl vel lacus gravida, a bibendum mi interdum. Proin viverra lacinia elit, at eleifend lorem viverra ac. Integer dapibus venenatis erat, nec rutrum lectus consequat eget.</p>
-        </section>
-
-        <section id="links" class="section">
-            <h2>🔗 Links</h2>
-            <p>
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Twitter</a>
-            </p>
-        </section>
-
-        <section id="email" class="section">
-            <h2>📧 Email Me</h2>
-            <p>Reach me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        </section>
+    <div id="about" class="section about-section">
+      <h2>📘 About</h2>
+      <p>I specialize in front-end development using HTML, CSS, and JavaScript. I enjoy learning new frameworks and enhancing user experience.</p>
     </div>
 
-    <script src="script.js"></script>
+    <div id="contents" class="section contents-section">
+      <h2>🧩 Contents</h2>
+      <p>Here are some of my recent works and projects. Below is some filler text to simulate a longer section:</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate viverra lacus, sed congue ipsum accumsan quis.</p>
+    </div>
+
+    <div id="links" class="section links-section">
+      <h2>🔗 Links</h2>
+      <p>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Twitter</a>
+      </p>
+    </div>
+
+    <div id="email" class="section email-section">
+      <h2>📧 Email Me</h2>
+      <p>Reach me at <a href="mailto:chandev@yahoo.com">chandev@yahoo.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 John Christian Lolos</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
