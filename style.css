@@ -17,7 +17,7 @@ body.dark {
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    }
+}
 
 body {
     background-color: var(--bg-color);
@@ -30,34 +30,7 @@ body {
     overflow: hidden;
 }
 
-.header-profile{
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    width: 100%;
-}
-
-.profile-picture {
-    height: 100px;
-    width: 100px;
-    border-radius: 20px;
-    margin-left: 20px;
-}
-
-.profile-picture img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-.profile-bio{
-    height: 100px;
-    width: 540px;
-    background-color: red;
-    margin-left: 40px;
-}
-
+/* ===== Profile Button Top Left ===== */
 .profile-btn {
     position: absolute;
     top: 20px;
@@ -68,7 +41,7 @@ body {
     border: 2px solid var(--text-color);
     overflow: hidden;
     background: var(--container-bg);
-    cursor: default;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +64,7 @@ body.dark .profile-btn {
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-/* Theme toggle */
+/* ===== Theme Toggle Button Top Right ===== */
 .toggle-btn {
     position: absolute;
     top: 20px;
@@ -140,9 +113,10 @@ body.dark .moon {
     transform: rotate(0deg);
 }
 
+/* ===== Floating Nav Buttons Horizontal ===== */
 .floating-nav {
     position: absolute;
-    top: 90px;
+    top: 90px; /* adjust distance from top */
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -174,39 +148,42 @@ body.dark .moon {
     box-shadow: 0 0 8px var(--accent-color);
 }
 
+/* Floating Animation */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-3px); }
+    50% { transform: translateY(-3px); } /* subtle float */
 }
 
+/* ===== Container ===== */
 .container {
     background-color: var(--container-bg);
     border-radius: 20px;
-    width: calc(600px + 200px);
-    max-width: calc(600px + 200px);
+    width: 90%;
+    max-width: 600px;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    animation: float 4s ease-in-out infinite;
 }
 
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Sections ===== */
 .section {
     display: none;
-    width: 100%;
-    overflow-y: auto;
+    text-align: center;
     transition: opacity 0.3s ease;
 }
 
 .section.active {
     display: block;
     animation: fadeIn 0.3s ease;
-}
-
-.profile-section {
-    height: 300px;
 }
 
 @keyframes fadeIn {
@@ -228,47 +205,28 @@ a:hover {
     text-decoration: underline;
 }
 
-.footer {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    color: var(--text-color);
-    user-select: none;
-    pointer-events: none;
-}
-
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
-    .container {
-        width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
-        max-height: 500px;
+  .container {
         padding: 1.2rem;
-        overflow: hidden;
-    }
+  }
 
-    .section.active {
-        max-height: 100%; 
-        overflow-y: auto;
-    }
-
-    h1 {
+  h1 {
         font-size: 1.4rem;
-    }
+  }
 
-    .nav-btn {
+  .nav-btn {
         padding: 6px 10px;
         font-size: 0.9rem;
-    }
+  }
 
-    .toggle-btn,
-    .profile-btn {
+  .toggle-btn,
+  .profile-btn {
         width: 40px;
         height: 40px;
-    }
+  }
 
-    .icon {
+  .icon {
         font-size: 1.3rem;
-    }
+  }
 }
