@@ -42,6 +42,8 @@ body {
     width: 100px;
     border-radius: 20px;
     margin-left: 20px;
+    border: solid 1px;
+    border-color: var(--accent-color);
 }
 
 .profile-picture img {
